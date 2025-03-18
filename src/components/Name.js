@@ -1,11 +1,5 @@
-import React from 'react';
-import product from '../product';
+import React from "react";
 
-
-const Name = () => {
-  return (
-    <h2>{product.name}</h2>
-  )
-}
+const Name = ({ name }) => <h3>{name}</h3>;
 
 export default Name;

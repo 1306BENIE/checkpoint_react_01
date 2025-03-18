@@ -1,39 +1,31 @@
 import React from "react";
-import { Card, Container } from "react-bootstrap";
+import { Container, Card } from "react-bootstrap";
 import Name from "./components/Name";
 import Price from "./components/Price";
 import Description from "./components/Description";
 import Image from "./components/Image";
+import Navigation from "./components/Navbar"; // ✅ Import de la nav
+import product from "./product";
 
-const firstName = ""; 
+const firstName = "BENIE"; 
 
 const App = () => {
   return (
-    <Container className="d-flex flex-column align-items-center mt-5">
-      <Card
-        style={{ width: "18rem" }}
-        className="shadow-lg p-3 mb-4 bg-white rounded"
-      >
-        <Card.Body className="text-center">
-          <Image />
-          <Name />
-          <Price />
-          <Description />
-        </Card.Body>
-      </Card>
+    <>
+      {/* Ajout de la Navbar avec l’image et le message */}
+      <Navigation firstName={firstName} />
 
-      {/* Message conditionnel */}
-      <h3 className="mt-3">Bonjour, {firstName || "!"}</h3>
-
-      {/* Affichage conditionnel de l'image */}
-      {firstName && (
-        <img
-          src="../assets/product-1.jpg"
-          alt="User"
-          className="mt-3 rounded-circle"
-        />
-      )}
-    </Container>
+      <Container className="d-flex flex-column align-items-center mt-5">
+        <Card style={{ width: "18rem" }} className="shadow-lg p-3 mb-4 bg-white rounded">
+          <Card.Body className="text-center">
+            <Image images={product.images} />
+            <Name name={product.name} />
+            <Price price={product.price} />
+            <Description description={product.description} />
+          </Card.Body>
+        </Card>
+      </Container>
+    </>
   );
 };
 

@@ -1,12 +1,5 @@
-import React from 'react';
-import product from '../product'
+import React from "react";
 
-const Price = () => {
-  return (
-    <div>
-      <h3>Price: {product.price} $</h3>
-    </div>
-  );
-}
+const Price = ({ price }) => <h4 className="text-success">{price}</h4>;
 
 export default Price;

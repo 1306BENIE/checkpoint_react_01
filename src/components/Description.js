@@ -1,12 +1,5 @@
-import React from 'react';
-import product from '../product'
+import React from "react";
 
-const Description = () => {
-  return (
-    <div>
-      <p>{product.description}</p>
-    </div>
-  );
-}
+const Description = ({ description }) => <p>{description}</p>;
 
 export default Description;
