@@ -1,5 +1,10 @@
-import React from "react";
+// Importation de React pour pouvoir utiliser JSX
+import React from "react"; 
 
-const Description = ({ description }) => <p>{description}</p>;
+// Définition du composant Description
+const Description = ({ description }) => {
+  return <p>{description}</p>;
+};
 
-export default Description;
+// Exportation du composant pour qu'il puisse être utilisé dans d'autres fichiers
+export default Description;  
